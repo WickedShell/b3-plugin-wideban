@@ -1,0 +1,24 @@
+<configuration plugin="wideban">
+	<settings name="settings">
+		<!-- kick/ban client if the same ip is found in penalties -->
+		<set name="banbyip">yes</set>
+		<!-- kick/ban client if the same guid is found in penalties -->
+		<set name="banbyguid">yes</set>
+		<!-- kick/ban client if the same pbid is found in penalties -->
+		<set name="banbypbid">yes</set>
+
+		<!-- Public message that will be displayed to the entire server when a banned user tries to connect
+		Leave empty or set 0 for no public message.
+		Possible variables :
+		                        $name : banned client current name
+                                $alias : banned client old name
+                                $ip : banned client ip
+                                $id : banned client id
+                                $guid : banned client guid
+                                $pbid : banned client pbid
+                                $adminname : name of the admin who banned the client
+                                $reason : reason of the ban
+		-->
+		<set name="publicmsg">^7$name (alias $alias) ^7was banned by $adminname for the reason ^1$reason</set>
+	</settings>
+</configuration>
